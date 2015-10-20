@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Dashboard_Control.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+
+    <title>ISL Support</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="~/Styles/Images/favicon.ico" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery-1.11.2.min.js") %>"></script>
+        </asp:PlaceHolder>
+</head>
+
+<body>
+<%--    <form id="form1" runat="server">--%>
+
+    <table style="width: 100%; height: 50px; border: 0; background: #fff;">
+        <tr>
+            <td class="nav_left"><a href="~/Default.aspx" runat="server"><img runat="server" src="~/Styles/Images/Home.png" alt="ISL Support Home" title="ISL Support Home" /></a></td>
+            <td class="nav_middle"><asp:Label ID="LblAnn" class="info_box" runat="server"></asp:Label></td>
+            <td class="nav_right"><a href="~/admin/admin.aspx" runat="server"><img runat="server" src="~/Styles/Images/Cog.png" alt="ISL Support Administration" title="ISL Support Administration" /></a></td>
+       </tr>
+    </table>
+
+
+<asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+
+
+</asp:contentplaceholder>
+    <%--</form>--%>
+    </body>
+</html>

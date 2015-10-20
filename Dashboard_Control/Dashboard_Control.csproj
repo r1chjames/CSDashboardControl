@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A41C637F-A6C9-4571-87C2-275C1DFFF3DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashboard_Control</RootNamespace>
+    <AssemblyName>Dashboard_Control</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="Dashboard_Control-Deployment" Order="1" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=WMM0772MANUAP01%3bInitial Catalog=Dashboard_Control%3bIntegrated Security=True%3bMax Pool Size=3" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\Dashboard_Control-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <PublishDatabases>true</PublishDatabases>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Dashboard_Control.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="ASP.Web.UI.PopupControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ASP.Web.UI.PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Spatial">
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\Active_Users.aspx" />
+    <Content Include="Admin\Page_Audit_Trail.aspx" />
+    <Content Include="Admin\Query_Audit_Trail.aspx" />
+    <Content Include="Admin\User_Access_Enq.aspx" />
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Admin\User_Access_Admin.aspx" />
+    <Content Include="Innova_Dashboard\Image_Viewer\GY2_Dboard_Image_Viewer.aspx" />
+    <Content Include="Innova_Dashboard\Innova_Dashboard.aspx" />
+    <Content Include="Innova_Dashboard\Image_Viewer\GY1_Dboard_Image_Viewer.aspx" />
+    <Content Include="Innova_Dashboard\Image_Admin\DBoard_Image_Admin.aspx" />
+    <Content Include="Innova_Dashboard\Image_Admin\Dboard_Image_Display.aspx" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\Help.aspx" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Styles\Images\Arrow.png" />
+    <Content Include="Styles\Images\Back.png" />
+    <Content Include="Styles\Images\Cog.png" />
+    <Content Include="Styles\Images\favicon.ico" />
+    <Content Include="Styles\Images\Fish_icon.png" />
+    <Content Include="Styles\Images\Help_icon.png" />
+    <Content Include="Styles\Images\Home.png" />
+    <Content Include="Styles\Images\Image_icon.png" />
+    <Content Include="Styles\Images\Screen_icon.png" />
+    <Content Include="Styles\Images\Search.png" />
+    <Content Include="Styles\Images\Type.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Active_Users.aspx.cs">
+      <DependentUpon>Active_Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Active_Users.aspx.designer.cs">
+      <DependentUpon>Active_Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page_Audit_Trail.aspx.cs">
+      <DependentUpon>Page_Audit_Trail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page_Audit_Trail.aspx.designer.cs">
+      <DependentUpon>Page_Audit_Trail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Query_Audit_Trail.aspx.cs">
+      <DependentUpon>Query_Audit_Trail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Query_Audit_Trail.aspx.designer.cs">
+      <DependentUpon>Query_Audit_Trail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User_Access_Enq.aspx.cs">
+      <DependentUpon>User_Access_Enq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User_Access_Enq.aspx.designer.cs">
+      <DependentUpon>User_Access_Enq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User_Access_Admin.aspx.cs">
+      <DependentUpon>User_Access_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User_Access_Admin.aspx.designer.cs">
+      <DependentUpon>User_Access_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Viewer\GY2_Dboard_Image_Viewer.aspx.cs">
+      <DependentUpon>GY2_Dboard_Image_Viewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Viewer\GY2_Dboard_Image_Viewer.aspx.designer.cs">
+      <DependentUpon>GY2_Dboard_Image_Viewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Innova_Dashboard.aspx.cs">
+      <DependentUpon>Innova_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Innova_Dashboard.aspx.designer.cs">
+      <DependentUpon>Innova_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Admin\DBoard_Image_Admin.aspx.designer.cs">
+      <DependentUpon>DBoard_Image_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Viewer\GY1_Dboard_Image_Viewer.aspx.cs">
+      <DependentUpon>GY1_Dboard_Image_Viewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Viewer\GY1_Dboard_Image_Viewer.aspx.designer.cs">
+      <DependentUpon>GY1_Dboard_Image_Viewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Admin\DBoard_Image_Admin.aspx.cs">
+      <DependentUpon>DBoard_Image_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Admin\Dboard_Image_Display.aspx.cs">
+      <DependentUpon>Dboard_Image_Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innova_Dashboard\Image_Admin\Dboard_Image_Display.aspx.designer.cs">
+      <DependentUpon>Dboard_Image_Display.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FileUtilities.cs" />
+    <Compile Include="Common\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Sandbox\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\MONT949IDV705.pubxml" />
+    <None Include="Properties\PublishProfiles\Dashboard_Control %28WMM0772MANUAP01%29.pubxml" />
+    <None Include="Properties\PublishProfiles\Dashboard_Control_Test %28WMM0772MANUAP01%29.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\Font\archer-medium-pro-webfont.eot" />
+    <Content Include="Styles\Font\archer-medium-pro-webfont.ttf" />
+    <Content Include="Styles\Font\archer-medium-pro-webfont.woff" />
+    <Content Include="Styles\Font\archer-semibold-pro-webfont.eot" />
+    <Content Include="Styles\Font\archer-semibold-pro-webfont.ttf" />
+    <Content Include="Styles\Font\archer-semibold-pro-webfont.woff" />
+    <Content Include="Styles\Font\morrisonsfreshbeta1-regular-webfont.eot" />
+    <Content Include="Styles\Font\morrisonsfreshbeta1-regular-webfont.ttf" />
+    <Content Include="Styles\Font\morrisonsfreshbeta1-regular-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3048</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>True</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
